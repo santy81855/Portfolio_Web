@@ -1,0 +1,62 @@
+@import "global.css";
+
+.ContactPage {
+    background-color: var(--background-color);
+    margin-top: 50px;
+    width: 95%;
+    height: 95%;
+    animation: slide-up 1.2s;
+}
+
+.ContactCard {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--menu-text-color);
+    padding: 20px;
+    flex-wrap: nowrap;
+    border: 1px solid white;
+    border-radius: 10px;
+    max-width: 700px;
+    max-height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.ContactInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.ContactTitle {
+    font-size: large;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.ContactEmail {
+    font-size: 20px;
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    padding-top: 10px;
+    color: var(--background-color);
+}
+
+.Selfie {
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+}

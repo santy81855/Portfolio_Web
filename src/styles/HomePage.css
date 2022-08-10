@@ -1,0 +1,53 @@
+@import "global.css";
+
+.HomePage {
+    background-color: var(--background-color);
+    margin-top: 2vh;
+    padding: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    animation: slide-left 1.2s;
+}
+
+.HomePageHeader {
+    display: flex;
+    flex-direction: column;
+    color: var(--menu-text-color);
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    text-align: center;
+    font-size: 20px;
+}
+
+.LanguagesImage {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.TitleBar {
+    background-color: var(--menu-text-color);
+    height: 2px;
+    width: 10vw;
+}
+
+.NextArrow {
+    margin-top: 2vh;
+    cursor: pointer;
+    width: 90px;
+    height: 110px;
+    opacity: 0.7;
+}
+
+.NextArrow:hover {
+    transition: 1s;
+    opacity: 1;
+}
+
+.NextArrow:not(:hover) {
+    transition: 1s;
+    opacity: 0.7;
+}
