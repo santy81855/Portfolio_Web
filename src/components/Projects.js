@@ -59,8 +59,8 @@ export default function ProjectPage() {
         mobileView: width < 480,
         tabletView: width >= 480 && width < 768,
         tabletPortraitView: width >= 768 && width < 1024,
-        desktopView: width >= 1024 && width < 1280,
-        desktopLargeView: width >= 1280,
+        desktopView: width >= 1024 && width < 1340,
+        desktopLargeView: width >= 1340,
     };
 
     function getItemWidth(responsive) {
@@ -79,8 +79,8 @@ export default function ProjectPage() {
 
     const itemWidth = {
         width: getItemWidth(responsive),
-        marginLeft: getItemMargin(responsive),
-        marginRight: getItemMargin(responsive),
+        //marginLeft: getItemMargin(responsive),
+        //marginRight: getItemMargin(responsive),
     };
 
     function getItemMargin(responsive) {
@@ -97,8 +97,8 @@ export default function ProjectPage() {
         }
     }
 
-    function ProjectClick(project) {
-        console.log("clicked on ");
+    function ProjectClick(link) {
+        window.open(link, "_blank", "noopener,noreferrer");
     }
 
     function ProjectHover(project, description, title) {
@@ -115,7 +115,7 @@ export default function ProjectPage() {
                     element.project.current.style.backgroundColor =
                         Colors.background;
                     // put the opacity back to normal
-                    element.project.current.style.opacity = "0.6";
+                    element.project.current.style.opacity = "0.3";
                     // hide the description for this project
                     element.description.current.style.display = "none";
                     // put the title and description color back to normal
@@ -137,6 +137,9 @@ export default function ProjectPage() {
             project.current.style.backgroundColor = Colors.lighterBackground;
             // put the opacity to 1 to focus on this project
             project.current.style.opacity = "1";
+            // hide then show the title
+            title.current.style.display = "none";
+            title.current.style.display = "flex";
             // show the description for this project
             description.current.style.display = "flex";
             // make the title and description color darker
@@ -153,7 +156,7 @@ export default function ProjectPage() {
         // set the background back to normal
         project.current.style.backgroundColor = Colors.background;
         // put the opacity back to normal
-        project.current.style.opacity = "0.6";
+        project.current.style.opacity = "0.3";
         // hide the description for this project
         description.current.style.display = "none";
         // put the title and description color back to normal
@@ -245,12 +248,16 @@ export default function ProjectPage() {
             <img className="ProjectImage" src={Codon} alt="Codon" />
         </div>
     );
-
+    const project1Link = "https://github.com/santy81855/VR_Cell";
+    const project2Link = "https://github.com/santy81855/Glass_Cannon";
+    const project3Link = "https://github.com/santy81855/Typo";
+    const project4Link = "https://github.com/santy81855/AutoGrid";
+    const project5Link = "https://github.com/santy81855/Codon";
     // create project objects
     const project1 = (
         <div
             ref={project1Ref}
-            onClick={() => ProjectClick(project1Ref)}
+            onClick={() => ProjectClick(project1Link)}
             onMouseEnter={() =>
                 ProjectHover(project1Ref, description1Ref, title1Ref)
             }
@@ -268,7 +275,7 @@ export default function ProjectPage() {
     const project2 = (
         <div
             ref={project2Ref}
-            onClick={() => ProjectClick(project2Ref)}
+            onClick={() => ProjectClick(project2Link)}
             onMouseEnter={() =>
                 ProjectHover(project2Ref, description2Ref, title2Ref)
             }
@@ -286,7 +293,7 @@ export default function ProjectPage() {
     const project3 = (
         <div
             ref={project3Ref}
-            onClick={() => ProjectClick(project3Ref)}
+            onClick={() => ProjectClick(project3Link)}
             onMouseEnter={() =>
                 ProjectHover(project3Ref, description3Ref, title3Ref)
             }
@@ -304,7 +311,7 @@ export default function ProjectPage() {
     const project4 = (
         <div
             ref={project4Ref}
-            onClick={() => ProjectClick(project4Ref)}
+            onClick={() => ProjectClick(project4Link)}
             onMouseEnter={() =>
                 ProjectHover(project4Ref, description4Ref, title4Ref)
             }
@@ -322,7 +329,7 @@ export default function ProjectPage() {
     const project5 = (
         <div
             ref={project5Ref}
-            onClick={() => ProjectClick(project5Ref)}
+            onClick={() => ProjectClick(project5Link)}
             onMouseEnter={() =>
                 ProjectHover(project5Ref, description5Ref, title5Ref)
             }
