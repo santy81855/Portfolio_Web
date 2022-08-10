@@ -39,19 +39,25 @@ export default function ContactPage() {
     // variable to store the contents of the project page
     const ContactPage = (
         <div className="ContactPage">
-            <div className="Lanyard"></div>
+            <div className="Swing">
+                <div className="Lanyard"></div>
 
-            <div className="ContactCard">
-                <div className="LanyardHoleContainer">
-                    <div className="LanyardHoleSide"></div>
-                    <div className="LanyardHoleMiddle"></div>
-                    <div className="LanyardHoleSide"></div>
+                <div className="ContactCard">
+                    <div className="LanyardHoleContainer">
+                        <div className="LanyardHoleSide"></div>
+                        <div className="LanyardHoleMiddle"></div>
+                        <div className="LanyardHoleSide"></div>
+                    </div>
+                    <div className="Divider"></div>
+                    <img
+                        src={Zigzag}
+                        alt="Selfie"
+                        className="TopCardColorBlock"
+                    />
+                    <div className="MiddleCardColorBlock"></div>
+                    <img src={Selfie} alt="Selfie" className="Selfie" />
+                    {ContactInformation}
                 </div>
-                <div className="Divider"></div>
-                <img src={Zigzag} alt="Selfie" className="TopCardColorBlock" />
-                <div className="MiddleCardColorBlock"></div>
-                <img src={Selfie} alt="Selfie" className="Selfie" />
-                {ContactInformation}
             </div>
         </div>
     );
