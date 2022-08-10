@@ -14,7 +14,7 @@ import { HomePage, AboutPage, PortfolioPage } from "./Global";
 
 export default function Menu() {
     // here we import the states we have stored in the AppContext in the App.js file
-    const { width, setPage, projectContainer } = useContext(AppContext);
+    const { width, setPage } = useContext(AppContext);
     // reference to each button in the menu
     const MenuLogoRef = useRef(null);
     const MenuTextRef = useRef(null);
@@ -23,12 +23,6 @@ export default function Menu() {
     const PortfolioButtonRef = useRef(null);
     const PortfolioTextRef = useRef(null);
     const MenuRef = useRef(null);
-    const [MenuXPosition, setMenuXPosition] = useState(0);
-
-    // set the projectContainer on refresh
-    useEffect(() => {
-        console.log(projectContainer);
-    }, [projectContainer]);
 
     // get the exact place the menu ends on the screen
     useLayoutEffect(() => {
@@ -39,11 +33,6 @@ export default function Menu() {
 
     // function to set the current window width state
     const updateDimensions = () => {};
-
-    // function to handle clicking the portfolio button
-    function portfolioClick() {
-        projectContainer.scrollIntoView({ behavior: "smooth" });
-    }
 
     const responsive = {
         showTitleText: width > 600,

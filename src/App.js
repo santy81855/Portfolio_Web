@@ -18,18 +18,12 @@ function App() {
     // state to track window width
     const [width, setWindowWidth] = useState(window.innerWidth);
     const [page, setPage] = useState(0);
-    // state to track the projects container
-    const [projectContainer, setProjectContainer] = useState(null);
-    // state to track the homepage container
-    const [homePageContainer, setHomePageContainer] = useState(null);
+    const [touchScreen, setTouchScreen] = useState(false);
     const PassedStates = {
         page,
         setPage,
         width,
-        projectContainer,
-        setProjectContainer,
-        homePageContainer,
-        setHomePageContainer,
+        touchScreen,
     };
     // use effect to detect window size changes
     useEffect(() => {
@@ -42,6 +36,15 @@ function App() {
         const width = window.innerWidth;
         setWindowWidth(width);
     };
+
+    useEffect(() => {
+        var isTouch = window.matchMedia("(pointer: coarse)").matches;
+        var isMouse = window.matchMedia("(pointer: fine)").matches;
+
+        if (isTouch || !isMouse) {
+            setTouchScreen(true);
+        }
+    }, []);
 
     const divider = <div className="HorLine"></div>;
 

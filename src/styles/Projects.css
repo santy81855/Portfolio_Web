@@ -1,7 +1,7 @@
 @import "global.css";
 
 .ProjectPage {
-    animation: slide-left 1.5s;
+    animation: slide-up 1.5s;
     display: flex;
     flex-direction: column;
 }
@@ -28,7 +28,6 @@
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 15px;
-    opacity: 0.3;
 }
 
 .ProjectItem:hover {
@@ -36,10 +35,11 @@
 }
 
 .ProjectItem:not(:hover) {
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .ProjectTitle {
+    padding-top: 5px;
     align-self: center;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -48,11 +48,16 @@
 }
 
 .ProjectDescription {
-    animation: slide-down 1.2s;
-    font-size: 15px;
-    color: var(--text-highlight-color);
+    animation: slide-up 1.2s;
+    font-size: 20px;
+    color: var(--background-color);
     padding-left: 10px;
-    display: none;
+}
+
+.ProjectDescriptionDummy {
+    font-size: 20px;
+    color: var(--background-color);
+    padding-left: 10px;
 }
 
 .ProjectImageContainer {

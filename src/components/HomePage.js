@@ -9,26 +9,33 @@ import { AppContext } from "../App";
 import "../styles/HomePage.css";
 import { Colors } from "./Global";
 import NextArrow from "../images/next_arrow.png";
+import NextArrowDown from "../images/next_arrow_down.png";
 import { PortfolioPage } from "./Global";
 
 export default function HomePage() {
     // state to track window width
-    const {
-        width,
-        page,
-        setPage,
-        setProjectContainer,
-        setHomePageContainer,
-        homePageContainer,
-    } = useContext(AppContext);
+    const { width, page, setPage, touchScreen } = useContext(AppContext);
     // ref to store the container so we can scroll to it
     const containerRef = useRef(null);
+    // reference to the arrow
+    const arrowRef = useRef(null);
 
-    // set the homepagecontainer on refresh
-    useEffect(() => {
-        setHomePageContainer(containerRef.current);
-    }, []);
+    useEffect(() => {}, [touchScreen]);
 
+    const touchResponsive = {
+        hideOpacity: touchScreen,
+    };
+
+    const arrowOpacity = {
+        opacity: touchResponsive.hideOpacity ? 1 : 0.3,
+    };
+
+    function hover() {
+        arrowRef.current.style.opacity = 1;
+    }
+    function unhover() {
+        arrowRef.current.style.opacity = 0.3;
+    }
     // Title for the homepage
 
     // variable to store the contents of the project page
@@ -46,10 +53,14 @@ export default function HomePage() {
                     JavaScript. Check out my projects!
                 </p>
                 <img
+                    ref={arrowRef}
                     onClick={() => setPage(PortfolioPage)}
-                    src={NextArrow}
+                    src={NextArrowDown}
                     alt="NextArrow"
                     className="NextArrow"
+                    style={arrowOpacity}
+                    onMouseEnter={hover}
+                    onMouseLeave={unhover}
                 />
             </div>
         </div>
