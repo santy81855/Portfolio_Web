@@ -20,7 +20,7 @@ import { Colors } from "./Global";
 
 export default function ProjectPage() {
     // state to track window width
-    const { width, setProjectContainer, touchScreen } = useContext(AppContext);
+    const { width, touchScreen } = useContext(AppContext);
     // create references for each of the 5 projects
     const project1Ref = useRef(null);
     const project2Ref = useRef(null);

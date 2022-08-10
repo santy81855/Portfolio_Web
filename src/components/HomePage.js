@@ -14,7 +14,7 @@ import { PortfolioPage } from "./Global";
 
 export default function HomePage() {
     // state to track window width
-    const { width, page, setPage, touchScreen } = useContext(AppContext);
+    const { setPage, touchScreen } = useContext(AppContext);
     // ref to store the container so we can scroll to it
     const containerRef = useRef(null);
     // reference to the arrow
