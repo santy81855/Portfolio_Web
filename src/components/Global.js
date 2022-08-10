@@ -1,6 +1,7 @@
 export const Colors = {
     background: "#081227",
     lighterBackground: "#eff5f5",
+    menuText: "#8FBCBB",
     accent: "#1fc1a5",
     highlight: "#8FBCBB",
     text: "#ffffff",

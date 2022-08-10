@@ -134,7 +134,7 @@ export default function ProjectPage() {
             };
             hoverArr.push(tile);
             // set the background color of the project a little darker
-            project.current.style.backgroundColor = Colors.lighterBackground;
+            project.current.style.backgroundColor = Colors.menuText;
             // put the opacity to 1 to focus on this project
             project.current.style.opacity = "1";
             // hide then show the title
