@@ -38,8 +38,9 @@ export default function HomePage() {
                 <p>
                     <b>Hello,</b> my name is <b>Santiago Garcia</b>, and I am a
                     Computer Science student at the University of Central
-                    Florida. I have followed the role of back-end developer, but
-                    I greatly enjoy all aspects of software development.
+                    Florida. I typically follow the roles of a back-end
+                    developer, but I greatly enjoy all aspects of software
+                    development.
                     <br />
                     <br />I have experience coding in Python, Java, C#, C, and
                     JavaScript. Check out my projects!
