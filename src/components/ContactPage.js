@@ -9,6 +9,7 @@ import { AppContext } from "../App";
 import "../styles/ContactPage.css";
 import { Colors } from "./Global";
 import Selfie from "../images/selfie.png";
+import Zigzag from "../images/zigzag.png";
 
 export default function ContactPage() {
     // state to track window width
@@ -25,38 +26,30 @@ export default function ContactPage() {
         stackVertical: width < 800,
     };
 
-    const stackContactCardVertical = {
-        flexDirection: responsive.stackVertical ? "column" : "row",
-        maxWidth: responsive.stackVertical ? 350 : 700,
-        maxHeight: responsive.stackVertical ? 700 : 350,
-        alignItems: responsive.stackVertical ? "center" : "flex-start",
-    };
-
     // information inside my contact card
     const ContactInformation = (
         <div className="ContactInformation">
-            <div className="ContactTitle">
-                Name:
-                <br />
-                Santiago Garcia
-            </div>
-            <div className="ContactTitle">
-                Email:
-                <br />
-                mynameissantiagogarcia@gmail.com
-            </div>
-            <div className="ContactTitle">
-                Phone #:
-                <br />
-                678-735-9580
-            </div>
+            <div className="ContactName">Santiago Garcia</div>
+            <div className="ContactTitle">Developer</div>
+            <div className="ContactPhone">678-735-9580</div>
+            <div className="ContactEmail">mynameissantiagogarcia@gmail.com</div>
         </div>
     );
 
     // variable to store the contents of the project page
     const ContactPage = (
         <div className="ContactPage">
-            <div className="ContactCard" style={stackContactCardVertical}>
+            <div className="Lanyard"></div>
+
+            <div className="ContactCard">
+                <div className="LanyardHoleContainer">
+                    <div className="LanyardHoleSide"></div>
+                    <div className="LanyardHoleMiddle"></div>
+                    <div className="LanyardHoleSide"></div>
+                </div>
+                <div className="Divider"></div>
+                <img src={Zigzag} alt="Selfie" className="TopCardColorBlock" />
+                <div className="MiddleCardColorBlock"></div>
                 <img src={Selfie} alt="Selfie" className="Selfie" />
                 {ContactInformation}
             </div>

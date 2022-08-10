@@ -5,6 +5,10 @@ body {
     --accent-color: #ebcb8b;
     --text-highlight-color: #ffffff;
     --min-width: 330px;
+    --contact-dark-accent: #17324f;
+    --contact-light-accent: #1b5d8f;
+    --contact-light-text: #67acce;
+    --contact-background: #d1e4eb;
 }
 
 @keyframes fade-in {

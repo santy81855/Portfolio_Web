@@ -2,25 +2,103 @@
 
 .ContactPage {
     background-color: var(--background-color);
-    margin-top: 50px;
+    margin-top: 0px;
     width: 95%;
     height: 95%;
     animation: slide-up 1.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Lanyard {
+    background-color: var(--menu-text-color);
+    border-left: 1px solid var(--contact-dark-accent);
+    border-right: 1px solid var(--contact-dark-accent);
+    border-bottom: 1px solid var(--contact-dark-accent);
+    border-radius: 0 0 5px 5px;
+    width: 30px;
+    height: 230px;
+    margin-bottom: -30px;
+    z-index: 1;
+}
+
+.LanyardHoleContainer {
+    background-color: var(--contact-background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+    padding-top: 30px;
+    border-radius: 2px;
+}
+
+.LanyardHoleMiddle {
+    background-color: var(--background-color);
+    width: 40px;
+    height: 15px;
+    border-radius: 30%;
+    margin-bottom: 25px;
+}
+
+.LanyardHoleSide {
+    background-color: var(--background-color);
+    width: 50px;
+    height: 10px;
+    border-radius: 30%;
+    margin-bottom: 20px;
+}
+
+.Divider {
+    width: 95%;
+    height: 3px;
+    border-radius: 1px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.TopCardColorBlock {
+    height: 170px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--contact-dark-accent);
+}
+
+.CompanyName {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.MiddleCardColorBlock {
+    height: 20px;
+    width: 100%;
+    background-color: var(--contact-light-accent);
 }
 
 .ContactCard {
+    z-index: 0;
     display: flex;
-    flex-direction: row;
-    background-color: var(--menu-text-color);
-    padding: 20px;
+    flex-direction: column;
+    background-color: var(--contact-background);
+    padding-bottom: 20px;
     flex-wrap: nowrap;
     border: 1px solid white;
-    border-radius: 10px;
-    max-width: 700px;
-    max-height: 350px;
+    border-radius: 5px;
+    max-width: 300px;
+    max-height: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 8px #0b172f, 10px 10px 8px black;
 }
 
 .ContactInformation {
@@ -31,32 +109,55 @@
     width: 100%;
     height: 100%;
     border: none;
+    background-color: white;
+    margin-top: -75px;
+}
+
+.ContactName {
+    margin-top: 80px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    color: var(--contact-light-accent);
+    text-align: center;
 }
 
 .ContactTitle {
-    font-size: large;
-    width: 100%;
-    height: 40px;
-    text-align: left;
-    padding-top: 10px;
-    color: white;
+    color: #67acce;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: -50px;
     text-align: center;
-    flex-grow: 1;
 }
 
 .ContactEmail {
-    font-size: 20px;
-    padding-left: 10px;
-    width: 100%;
-    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
     text-align: left;
-    padding-top: 10px;
-    color: var(--background-color);
+    color: var(--contact-light-text);
+    text-align: center;
+    flex-grow: 1;
+    padding-bottom: 15px;
+    margin-top: -30px;
+}
+
+.ContactPhone {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: var(--contact-light-text);
+    text-align: center;
+    flex-grow: 1;
+    margin-top: 0px;
 }
 
 .Selfie {
     cursor: pointer;
     width: 50%;
     height: 100%;
-    border-radius: 10px;
+    border: 2px solid white;
+    border-radius: 100%;
+    margin-top: -75px;
+    z-index: 2;
 }
