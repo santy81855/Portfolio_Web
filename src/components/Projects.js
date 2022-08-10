@@ -52,6 +52,17 @@ export default function ProjectPage() {
     const [hover3, setHover3] = useState(false);
     const [hover4, setHover4] = useState(false);
     const [hover5, setHover5] = useState(false);
+    // strings for the project descriptions
+    const description1 =
+        "A virtual reality tour of a human cell where you get to trigger interactions between organelles while you learn. Created with Unity and C#.";
+    const description2 =
+        "A 3D game where you play as a glass cannon and shoot down waves of incoming enemies equipped with different AI. Created with Unity and C#.";
+    const description3 =
+        "Modern text editor with syntax highlighting support for 7 languages. Has code preview on the right side. Created with Python using PyQt.";
+    const description4 =
+        "Application used by the SARC department at UCF. It saves tutors hours of work each month by automating attendance logs. Created with Python.";
+    const description5 =
+        "Desktop application to practice your typing skills. Typing tests measure your words per minute and accuracy. Created with Python and PyQt.";
 
     useEffect(() => {}, [touchScreen]);
 
@@ -80,13 +91,13 @@ export default function ProjectPage() {
 
     function getItemWidth(responsive) {
         if (responsive.mobileView) {
-            return "90vw";
+            return "100vw";
         } else if (responsive.tabletView) {
-            return "90vw";
+            return "100vw";
         } else if (responsive.tabletPortraitView) {
-            return "90vw";
+            return "100vw";
         } else if (responsive.desktopView) {
-            return "45vw";
+            return "35vw";
         } else if (responsive.desktopLargeView) {
             return "22vw";
         }
@@ -101,20 +112,6 @@ export default function ProjectPage() {
         //marginLeft: getItemMargin(responsive),
         //marginRight: getItemMargin(responsive),
     };
-
-    function getItemMargin(responsive) {
-        if (responsive.mobileView) {
-            return "30px";
-        } else if (responsive.tabletView) {
-            return "30px";
-        } else if (responsive.tabletPortraitView) {
-            return "30px";
-        } else if (responsive.desktopView) {
-            return "10px";
-        } else if (responsive.desktopLargeView) {
-            return "10px";
-        }
-    }
 
     function ProjectClick(link) {
         window.open(link, "_blank", "noopener,noreferrer");
@@ -194,62 +191,52 @@ export default function ProjectPage() {
 
     const project1Description = (
         <p ref={description1Ref} className="ProjectDescription">
-            A virtual reality tour of a human cell where you get to trigger
-            interactions between organelles. Created with Unity and C#.
+            {description1}
         </p>
     );
     const project1DummyText = (
         <p ref={dummy1Ref} className="ProjectDescriptionDummy">
-            A virtual reality tour of a human cell where you get to trigger
-            interactions between organelles. Created with Unity and C#.
+            {description1}
         </p>
     );
     const project2Description = (
         <p ref={description2Ref} className="ProjectDescription">
-            A 3D game where you play as a glass cannon and shoot down waves of
-            incoming enemies. Created with Unity and C#.
+            {description2}
         </p>
     );
     const project2DummyText = (
         <p ref={dummy2Ref} className="ProjectDescriptionDummy">
-            A 3D game where you play as a glass cannon and shoot down waves of
-            incoming enemies. Created with Unity and C#.
+            {description2}
         </p>
     );
     const project3Description = (
         <p ref={description3Ref} className="ProjectDescription">
-            Desktop application to practice your typing skills. Typing tests
-            measure your words per minute and accuracy. Created with Python.
+            {description3}
         </p>
     );
     const project3DummyText = (
         <p ref={dummy3Ref} className="ProjectDescriptionDummy">
-            Desktop application to practice your typing skills. Typing tests
-            measure your words per minute and accuracy. Created with Python.
+            {description3}
         </p>
     );
     const project4Description = (
         <p ref={description4Ref} className="ProjectDescription">
-            Application used by the SARC department at UCF. It saves tutors
-            hours of work each month. Created with Python.
+            {description4}
         </p>
     );
     const project4DummyText = (
         <p ref={dummy4Ref} className="ProjectDescriptionDummy">
-            Application used by the SARC department at UCF. It saves tutors
-            hours of work each month. Created with Python.
+            {description4}
         </p>
     );
     const project5Description = (
         <p ref={description5Ref} className="ProjectDescription">
-            Modern text editor with syntax highlighting support for 7 languages.
-            Created with Python using PyQt.
+            {description5}
         </p>
     );
     const project5DummyText = (
         <p ref={dummy5Ref} className="ProjectDescriptionDummy">
-            Modern text editor with syntax highlighting support for 7 languages.
-            Created with Python using PyQt.
+            {description5}
         </p>
     );
 

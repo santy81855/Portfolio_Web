@@ -114,8 +114,8 @@ export default function Menu() {
             {MenuLogo}
             {/*put profile and settings in their own div so we can add responsiveness*/}
             <div className="ProfileAndSettings">
-                {AboutButton}
                 {PortfolioButton}
+                {AboutButton}
             </div>
         </div>
     );
