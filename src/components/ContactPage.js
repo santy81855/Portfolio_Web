@@ -9,7 +9,7 @@ import { AppContext } from "../App";
 import "../styles/ContactPage.css";
 import { Colors } from "./Global";
 import Selfie from "../images/selfie.png";
-import Zigzag from "../images/zigzag.png";
+import Zigzag from "../images/zigzag_blue.png";
 
 export default function ContactPage() {
     // state to track window width
@@ -21,6 +21,12 @@ export default function ContactPage() {
         setHomePageContainer,
         homePageContainer,
     } = useContext(AppContext);
+    // create a reference
+    const dividerRef = useRef(null);
+
+    useEffect(() => {
+        dividerRef.current.style.animationPlayState = "paused";
+    }, []);
 
     // reference to the contact card
     const contactCardRef = useRef(null);
@@ -46,11 +52,14 @@ export default function ContactPage() {
         contactCardRef.current.style.animationPlayState = "running";
     }
 
+    const divider = <div ref={dividerRef} className="HorLineContact"></div>;
     // variable to store the contents of the project page
     const ContactPage = (
         <div className="ContactPage">
             <div ref={contactCardRef} className="Swing">
-                <div className="Triangle"></div>
+                {divider}
+                <div className="LanyardAngle"></div>
+                <div className="LanyardTop"></div>
                 <div className="Lanyard"></div>
 
                 <div

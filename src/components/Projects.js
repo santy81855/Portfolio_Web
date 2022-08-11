@@ -58,12 +58,11 @@ export default function ProjectPage() {
     const description2 =
         "A 3D game where you play as a glass cannon and shoot down waves of incoming enemies equipped with different AI. Created with Unity and C#.";
     const description3 =
-        "Modern text editor with syntax highlighting support for 7 languages. Has code preview on the right side. Created with Python using PyQt.";
+        "Desktop application to practice your typing skills. Typing tests measure your words per minute and accuracy. Created with Python and PyQt.";
     const description4 =
         "Application used by the SARC department at UCF. It saves tutors hours of work each month by automating attendance logs. Created with Python.";
     const description5 =
-        "Desktop application to practice your typing skills. Typing tests measure your words per minute and accuracy. Created with Python and PyQt.";
-
+        "Modern text editor with syntax highlighting support for 7 languages. Has code preview on the right side. Created with Python using PyQt.";
     useEffect(() => {}, [touchScreen]);
 
     const touchResponsive = {

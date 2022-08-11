@@ -52,7 +52,7 @@ function App() {
         <AppContext.Provider value={PassedStates}>
             <div className="App">
                 <Menu />
-                {divider}
+                {page !== 2 && divider}
                 {page === 0 && <HomePage />}
                 {page === 1 && <Project />}
                 {page === 2 && <ContactPage />}

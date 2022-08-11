@@ -25,8 +25,16 @@
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-
     border-bottom: 15px solid var(--menu-text-color);
+}
+
+.HorLineContact {
+    background-color: var(--menu-text-color);
+    height: 2px;
+    width: 50vw;
+    margin-top: 3vh;
+    margin-bottom: 0px;
+    z-index: 2;
 }
 
 .Lanyard {
@@ -38,7 +46,41 @@
     width: 30px;
     height: 185px;
     margin-bottom: -30px;
+    background-image: url("../images/ribbon.png");
+    margin-top: -5px;
+    z-index: 2;
+}
+
+.LanyardTop {
+    background-color: var(--menu-text-color);
+    border-left: 1px solid var(--contact-dark-accent);
+    border-right: 1px solid var(--contact-dark-accent);
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px;
+    width: 45px;
+    height: 12px;
+    background-image: url("../images/ribbon.png");
     z-index: 1;
+    margin-left: 15px;
+    margin-bottom: -5px;
+    margin-top: -3px;
+    padding-top: 3px;
+}
+
+.LanyardAngle {
+    background-color: var(--menu-text-color);
+    border-left: 1px solid var(--contact-dark-accent);
+    border-right: 1px solid var(--contact-dark-accent);
+    border-bottom: 1px solid var(--contact-dark-accent);
+    border-radius: 0 0 5px 5px;
+    width: 30px;
+    height: 190px;
+    z-index: 0;
+    background-image: url("../images/ribbon.png");
+    margin-bottom: -190px;
+    margin-top: -5px;
+    transform: rotate(5deg);
+    margin-left: 15px;
 }
 
 .LanyardHoleContainer {
@@ -51,6 +93,13 @@
     width: 100%;
     padding-top: 30px;
     border-radius: 2px;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0.25) 1px,
+        transparent 1px,
+        transparent 6px
+    );
 }
 
 .LanyardHoleMiddle {
@@ -76,6 +125,7 @@
     background-color: white;
     margin-top: 10px;
     margin-bottom: 10px;
+    box-shadow: 5px 5px 8px #0b172f, 10px 10px 8px grey;
 }
 
 .TopCardColorBlock {
@@ -84,6 +134,8 @@
     margin-top: 10px;
     border-radius: 5px 5px 0px 0px;
     background-color: var(--contact-dark-accent);
+    box-shadow: 5px 5px 8px #0b172f, 10px 10px 8px grey;
+    background-image: url("../images/paper.jpg");
 }
 
 .CompanyName {
@@ -97,9 +149,17 @@
     height: 20px;
     width: 100%;
     background-color: var(--contact-light-accent);
+    box-shadow: 5px 3px 8px #0b172f, 10px 10px 8px grey;
 }
 
 .ContactCard {
+    background-image: repeating-linear-gradient(
+        -319deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0.25) 1px,
+        transparent 3px,
+        transparent 15px
+    );
     z-index: 0;
     display: flex;
     flex-direction: column;
@@ -129,6 +189,8 @@
     border: none;
     background-color: white;
     margin-top: -75px;
+    background-image: url("../images/paper.jpg");
+    box-shadow: 5px 5px 8px #0b172f, 10px 10px 8px grey;
 }
 
 .ContactName {

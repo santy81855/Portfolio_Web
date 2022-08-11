@@ -36,7 +36,6 @@ export default function HomePage() {
     function unhover() {
         arrowRef.current.style.opacity = 0.3;
     }
-    // Title for the homepage
 
     // variable to store the contents of the project page
     const HomePage = (
