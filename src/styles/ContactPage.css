@@ -32,7 +32,6 @@
     background-color: var(--menu-text-color);
     height: 2px;
     width: 50vw;
-    margin-top: 3vh;
     margin-bottom: 0px;
     z-index: 2;
 }

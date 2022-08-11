@@ -25,12 +25,15 @@ function App() {
         width,
         touchScreen,
     };
+    // craete reference
+    const appRef = useRef(null);
     // use effect to detect window size changes
     useEffect(() => {
         updateDimensions();
         window.addEventListener("resize", updateDimensions);
         return () => window.removeEventListener("resize", updateDimensions);
     }, []);
+
     // function to set the current window width state
     const updateDimensions = () => {
         const width = window.innerWidth;
@@ -50,7 +53,7 @@ function App() {
 
     return (
         <AppContext.Provider value={PassedStates}>
-            <div className="App">
+            <div ref={appRef} className="App">
                 <Menu />
                 {page !== 2 && divider}
                 {page === 0 && <HomePage />}

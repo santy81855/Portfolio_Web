@@ -1,6 +1,7 @@
 body {
-    --background-color: #081227;
-    --lighter-background-color: #eff5f5;
+    --darker-background-color: #081227;
+    --background-color: #0e1e40;
+    --lighter-background-color: #334772;
     --menu-text-color: #8fbcbb;
     --accent-color: #ebcb8b;
     --text-highlight-color: #ffffff;
@@ -74,20 +75,17 @@ body {
     }
 }
 
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
-}
-
 @keyframes slide-down-repeat {
     0% {
         transform: translateY(0%);
+        opacity: 0.1;
     }
     80% {
         transform: translateY(30%);
+        opacity: 1;
     }
     100% {
         transform: translateY(0%);
+        opacity: 0.1;
     }
 }

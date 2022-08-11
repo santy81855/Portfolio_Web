@@ -63,7 +63,17 @@ export default function ProjectPage() {
         "Application used by the SARC department at UCF. It saves tutors hours of work each month by automating attendance logs. Created with Python.";
     const description5 =
         "Modern text editor with syntax highlighting support for 7 languages. Has code preview on the right side. Created with Python using PyQt.";
-    useEffect(() => {}, [touchScreen]);
+    useEffect(() => {
+        var isMouse = window.matchMedia("(pointer: fine)").matches;
+        if (touchScreen && !isMouse) {
+            // make the dummy text the background color
+            dummy1Ref.current.style.color = Colors.background;
+            dummy2Ref.current.style.color = Colors.background;
+            dummy3Ref.current.style.color = Colors.background;
+            dummy4Ref.current.style.color = Colors.background;
+            dummy5Ref.current.style.color = Colors.background;
+        }
+    }, [touchScreen]);
 
     const touchResponsive = {
         hideOpacity: touchScreen,
@@ -104,10 +114,10 @@ export default function ProjectPage() {
 
     const itemWidth = {
         width: getItemWidth(responsive),
-        opacity: touchResponsive.hideOpacity ? 1 : 0.6,
+        opacity: touchResponsive.hideOpacity ? 1 : 1,
         backgroundColor: touchResponsive.hideOpacity
             ? Colors.menuText
-            : Colors.background,
+            : "transparent",
         //marginLeft: getItemMargin(responsive),
         //marginRight: getItemMargin(responsive),
     };
@@ -157,7 +167,7 @@ export default function ProjectPage() {
         // set the background back to normal
         project.current.style.backgroundColor = "transparent";
         // put the opacity back to normal
-        project.current.style.opacity = "0.5";
+        project.current.style.opacity = "1";
         // put the title color back to normal
         title.current.style.color = Colors.text;
     }
