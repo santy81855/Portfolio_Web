@@ -54,15 +54,15 @@ export default function ProjectPage() {
     const [hover5, setHover5] = useState(false);
     // strings for the project descriptions
     const description1 =
-        "A virtual reality tour of a human cell where you get to trigger interactions between organelles while you learn. Created with Unity and C#.";
+        "Tour a human cell in VR and trigger interactions between organelles while you learn. Created with Unity and C#.";
     const description2 =
-        "A 3D game where you play as a glass cannon and shoot down waves of incoming enemies equipped with different AI. Created with Unity and C#.";
+        "Play as a glass cannon and shoot down waves of incoming enemies equipped with different AI. Created with Unity and C#.";
     const description3 =
-        "Desktop application to practice your typing skills. Typing tests measure your words per minute and accuracy. Created with Python and PyQt.";
+        "Desktop application to practice your typing skills. Typing tests measure your words per minute and accuracy. Created with Python and PyQt5.";
     const description4 =
         "Application used by the SARC department at UCF. It saves tutors hours of work each month by automating attendance logs. Created with Python.";
     const description5 =
-        "Modern text editor with syntax highlighting support for 7 languages. Has code preview on the right side. Created with Python using PyQt.";
+        "Modern text editor with syntax highlighting support for 7 languages. It has code preview on the right side. Created with Python using PyQt5.";
     useEffect(() => {
         var isMouse = window.matchMedia("(pointer: fine)").matches;
         if (touchScreen && !isMouse) {
@@ -267,7 +267,7 @@ export default function ProjectPage() {
     const project2Gif = (
         <div className="ProjectImageContainer">
             <img
-                className="ProjectImage"
+                className="ProjectGif"
                 src={GlassCannonAnimated}
                 alt="GlassCannonAnimated"
             />
@@ -280,11 +280,7 @@ export default function ProjectPage() {
     );
     const project3Gif = (
         <div className="ProjectImageContainer">
-            <img
-                className="ProjectImage"
-                src={TypoAnimated}
-                alt="TypoAnimated"
-            />
+            <img className="ProjectGif" src={TypoAnimated} alt="TypoAnimated" />
         </div>
     );
     const project4Image = (
@@ -295,7 +291,7 @@ export default function ProjectPage() {
     const project4Gif = (
         <div className="ProjectImageContainer">
             <img
-                className="ProjectImage"
+                className="ProjectGif"
                 src={AutoGridAnimated}
                 alt="AutoGridAnimated"
             />
@@ -309,7 +305,7 @@ export default function ProjectPage() {
     const project5Gif = (
         <div className="ProjectImageContainer">
             <img
-                className="ProjectImage"
+                className="ProjectGif"
                 src={CodonAnimated}
                 alt="CodonAnimated"
             />
