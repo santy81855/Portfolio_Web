@@ -155,7 +155,7 @@ export default function ProjectPage() {
             setHover5(false);
         }
         // set the background back to normal
-        project.current.style.backgroundColor = Colors.background;
+        project.current.style.backgroundColor = "transparent";
         // put the opacity back to normal
         project.current.style.opacity = "0.5";
         // put the title color back to normal

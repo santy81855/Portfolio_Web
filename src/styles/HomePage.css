@@ -41,6 +41,7 @@
     width: 120px;
     height: 90px;
     transform: scale(0.9);
+    animation: slide-down-repeat 1.8s linear infinite;
 }
 
 .NextArrow:hover {
