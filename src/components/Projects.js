@@ -99,7 +99,7 @@ export default function ProjectPage() {
         } else if (responsive.desktopView) {
             return "35vw";
         } else if (responsive.desktopLargeView) {
-            return "22vw";
+            return "35vw";
         }
     }
 

@@ -22,6 +22,8 @@ export default function ContactPage() {
         homePageContainer,
     } = useContext(AppContext);
 
+    // reference to the contact card
+    const contactCardRef = useRef(null);
     const responsive = {
         stackVertical: width < 800,
     };
@@ -36,13 +38,26 @@ export default function ContactPage() {
         </div>
     );
 
+    function StopAnimation() {
+        contactCardRef.current.style.animationPlayState = "paused";
+    }
+
+    function StartAnimation() {
+        contactCardRef.current.style.animationPlayState = "running";
+    }
+
     // variable to store the contents of the project page
     const ContactPage = (
         <div className="ContactPage">
-            <div className="Swing">
+            <div ref={contactCardRef} className="Swing">
+                <div className="Triangle"></div>
                 <div className="Lanyard"></div>
 
-                <div className="ContactCard">
+                <div
+                    className="ContactCard"
+                    onMouseEnter={StopAnimation}
+                    onMouseLeave={StartAnimation}
+                >
                     <div className="LanyardHoleContainer">
                         <div className="LanyardHoleSide"></div>
                         <div className="LanyardHoleMiddle"></div>
