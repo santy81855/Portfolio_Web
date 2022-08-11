@@ -62,8 +62,9 @@
 .ProjectDescriptionDummy {
     font-size: 18px;
     color: transparent;
-    padding-left: 10px;
+    width: 90%;
     align-self: center;
+    text-align: center;
 }
 
 .ProjectImageContainer {

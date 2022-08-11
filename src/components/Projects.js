@@ -114,7 +114,7 @@ export default function ProjectPage() {
 
     const itemWidth = {
         width: getItemWidth(responsive),
-        opacity: touchResponsive.hideOpacity ? 1 : 1,
+        opacity: touchResponsive.hideOpacity ? 1 : 0.8,
         backgroundColor: touchResponsive.hideOpacity
             ? Colors.menuText
             : "transparent",
@@ -171,7 +171,7 @@ export default function ProjectPage() {
         project.current.style.backgroundImage = "none";
         project.current.style.backgroundColor = "transparent";
         // put the opacity back to normal
-        project.current.style.opacity = "1";
+        project.current.style.opacity = "0.8";
         // put the title color back to normal
         title.current.style.color = Colors.text;
     }
