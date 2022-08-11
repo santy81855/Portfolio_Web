@@ -145,6 +145,9 @@ export default function ProjectPage() {
             }
             // set the background color of the project a little darker
             project.current.style.backgroundColor = Colors.menuText;
+            // add a gradient to the project on hover
+            project.current.style.backgroundImage =
+                "linear-gradient(to left,white,var(--menu-text-color))";
             // put the opacity to 1 to focus on this project
             project.current.style.opacity = "1";
             // make the title and description color darker
@@ -165,6 +168,7 @@ export default function ProjectPage() {
             setHover5(false);
         }
         // set the background back to normal
+        project.current.style.backgroundImage = "none";
         project.current.style.backgroundColor = "transparent";
         // put the opacity back to normal
         project.current.style.opacity = "1";

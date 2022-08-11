@@ -10,6 +10,14 @@ body {
     --contact-light-accent: #1b5d8f;
     --contact-light-text: #67acce;
     --contact-background: #d1e4eb;
+    --ribbon-texture: url("../images/ribbon.png");
+    --paper-texture: url("../images/paper.jpg");
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }
 
 @keyframes fade-in {
@@ -27,6 +35,18 @@ body {
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(0%);
     }
 }
 
