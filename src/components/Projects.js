@@ -424,11 +424,11 @@ export default function ProjectPage() {
             </div>
 
             <div className="ProjectContainer">
-                {project1}
-                {project2}
                 {project3}
                 {project5}
+                {project2}
                 {project4}
+                {project1}
             </div>
         </div>
     );
