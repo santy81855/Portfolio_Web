@@ -169,6 +169,7 @@
     flex-wrap: nowrap;
     border: 1px solid white;
     border-radius: 5px;
+    min-width: 300px;
     max-width: 300px;
     max-height: 700px;
     margin-left: auto;
