@@ -28,5 +28,22 @@
 }
 
 .TitleText {
-    color: var(--accent-color);
+    color: var(--menu-text-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--menu-text-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--menu-text-color);
 }
