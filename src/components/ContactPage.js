@@ -23,6 +23,7 @@ export default function ContactPage() {
     } = useContext(AppContext);
     // create a reference
     const dividerRef = useRef(null);
+    const copyRef = useRef(null);
 
     useEffect(() => {
         dividerRef.current.style.animationPlayState = "paused";
@@ -34,13 +35,30 @@ export default function ContactPage() {
         stackVertical: width < 800,
     };
 
+    async function timeout(milliseconds) {
+        return new Promise((res) => setTimeout(res, milliseconds));
+    }
+
+    async function CopyEmail() {
+        const email = "mynameissantiagogarcia@gmail.com";
+        navigator.clipboard.writeText(email);
+        copyRef.current.style.display = "flex";
+        await timeout(800);
+        copyRef.current.style.display = "none";
+    }
+
     // information inside my contact card
     const ContactInformation = (
         <div className="ContactInformation">
             <div className="ContactName">Santiago Garcia</div>
             <div className="ContactTitle">Developer</div>
             <div className="ContactPhone">678-735-9580</div>
-            <div className="ContactEmail">mynameissantiagogarcia@gmail.com</div>
+            <div ref={copyRef} className="ContactCopy">
+                Copied!
+            </div>
+            <div className="ContactEmail" onClick={CopyEmail}>
+                mynameissantiagogarcia@gmail.com
+            </div>
         </div>
     );
 

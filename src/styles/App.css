@@ -10,6 +10,12 @@
     align-items: center;
     font-size: calc(10px + 2vmin);
     font-family: sans-serif;
+    background-image: linear-gradient(
+        to bottom,
+        var(--lighter-background-color) 0vh,
+        var(--darker-background-color) 30vh,
+        var(--darker-background-color) 100vh
+    );
     /*background-image: url("../images/space.jpg"); 
     background-attachment: fixed;
     background-position: center;

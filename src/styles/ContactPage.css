@@ -223,6 +223,25 @@
     flex-grow: 1;
     padding-bottom: 15px;
     margin-top: -30px;
+    cursor: pointer;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.ContactCopy {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: var(--contact-light-text);
+    text-align: center;
+    flex-grow: 1;
+    margin-top: -30px;
+    cursor: pointer;
+    animation: fade-in 0.5s ease-in-out;
+    display: none;
+}
+
+.ContactEmail:hover {
+    color: var(--contact-dark-accent);
 }
 
 .ContactPhone {
