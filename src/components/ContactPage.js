@@ -29,6 +29,8 @@ export default function ContactPage() {
         dividerRef.current.style.animationPlayState = "paused";
     }, []);
 
+    const EMAIL = "santy@santiago-garcia.com";
+
     // reference to the contact card
     const contactCardRef = useRef(null);
     const responsive = {
@@ -40,7 +42,7 @@ export default function ContactPage() {
     }
 
     async function CopyEmail() {
-        const email = "mynameissantiagogarcia@gmail.com";
+        const email = EMAIL;
         navigator.clipboard.writeText(email);
         copyRef.current.style.display = "flex";
         await timeout(800);
@@ -51,13 +53,13 @@ export default function ContactPage() {
     const ContactInformation = (
         <div className="ContactInformation">
             <div className="ContactName">Santiago Garcia</div>
-            <div className="ContactTitle">Developer</div>
+            <div className="ContactTitle">DEVELOPER</div>
             <div className="ContactPhone">678-735-9580</div>
             <div ref={copyRef} className="ContactCopy">
                 Copied!
             </div>
             <div className="ContactEmail" onClick={CopyEmail}>
-                mynameissantiagogarcia@gmail.com
+                {EMAIL}
             </div>
         </div>
     );
