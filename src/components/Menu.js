@@ -14,7 +14,7 @@ import { HomePage, AboutPage, PortfolioPage } from "./Global";
 
 export default function Menu() {
     // here we import the states we have stored in the AppContext in the App.js file
-    const { width, setPage } = useContext(AppContext);
+    const { width, setPage, page } = useContext(AppContext);
     // reference to each button in the menu
     const MenuLogoRef = useRef(null);
     const MenuTextRef = useRef(null);
@@ -52,8 +52,36 @@ export default function Menu() {
 
     // create the text
     const MenuText = (
-        <a ref={MenuTextRef} className="LogoText" style={showMenuText}>
-            anty
+        <a ref={MenuTextRef} className="MenuText" style={showMenuText}>
+            About
+        </a>
+    );
+    const MenuTextUnderlined = (
+        <a
+            ref={MenuTextRef}
+            className="MenuTextUnderlined"
+            style={showMenuText}
+        >
+            About
+        </a>
+    );
+
+    const AboutTextUnderlined = (
+        <a
+            ref={MenuTextRef}
+            className="MenuTextUnderlined"
+            style={showMenuText}
+        >
+            Contact
+        </a>
+    );
+    const PortfolioTextUnderlined = (
+        <a
+            ref={MenuTextRef}
+            className="MenuTextUnderlined"
+            style={showMenuText}
+        >
+            Portfolio
         </a>
     );
     const AboutText = (
@@ -76,10 +104,11 @@ export default function Menu() {
             ref={MenuLogoRef}
             onClick={() => setPage(HomePage)}
             type="button"
-            className="MenuLogo"
+            className="PortfolioButton"
         >
             <img src={Logo} alt="logo" className="Logo" />
-            {MenuText}
+            {page === 0 && MenuTextUnderlined}
+            {page !== 0 && MenuText}
         </button>
     );
     const AboutButton = (
@@ -90,7 +119,8 @@ export default function Menu() {
             className="AboutButton"
         >
             <img src={AboutButtonIcon} alt="logo" className="ProfilePicture" />
-            {AboutText}
+            {page === 2 && AboutTextUnderlined}
+            {page !== 2 && AboutText}
         </button>
     );
     const PortfolioButton = (
@@ -105,7 +135,8 @@ export default function Menu() {
                 alt="logo"
                 className="SettingsPicture"
             />
-            {PortfolioText}
+            {page === 1 && PortfolioTextUnderlined}
+            {page !== 1 && PortfolioText}
         </button>
     );
     const Menu = (
